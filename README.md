@@ -1,1 +1,139 @@
-edit
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Data Diri Mahasiswa</title>
+    <!-- Memuat Tailwind CSS melalui CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font Inter untuk tampilan modern -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Warna latar belakang abu-abu terang */
+        }
+        /* Efek hover pada item data: Diubah kembali ke abu-abu terang */
+        .data-item:hover {
+            background-color: #f9fafb; /* Abu-abu sangat terang */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+    <!-- Skrip untuk kustomisasi Tailwind, menggunakan warna utama Emas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FFD700', // Warna Emas (Gold)
+                        'secondary': '#1e3a8a', // Biru tua (digunakan sebagai aksen dan teks)
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-8">
+
+    <!-- Kontainer Utama: Kartu Profil -->
+    <div class="w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition duration-300 ease-in-out">
+        
+        <!-- Bagian Header/Banner dengan Warna Primer (Emas) -->
+        <div class="bg-primary text-secondary p-6 sm:p-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">DATA DIRI MAHASISWA</h1>
+            <p class="mt-1 text-secondary text-lg">Informasi Akademik dan Personal</p>
+        </div>
+
+        <!-- Konten Profil -->
+        <div class="p-6 sm:p-10 flex flex-col md:flex-row gap-8">
+
+            <!-- Kolom Kiri: Foto Profil dan Nama -->
+            <div class="flex flex-col items-center md:items-start w-full md:w-1/3">
+                
+                <!-- Foto Profil (Lingkaran) -->
+                <div class="relative mb-6">
+                    <img 
+                        src="C:\Users\ASUS\Downloads\image foto profil.jpeg" 
+                        alt="Foto Profil Mahasiswa" 
+                        class="w-48 h-48 object-cover rounded-full border-4 border-secondary shadow-lg transition duration-500 ease-in-out hover:shadow-xl hover:border-primary"
+                        onerror="this.onerror=null;this.src='https://placehold.co/200x200/6b7280/ffffff?text=Placeholder';"
+                    >
+                    <!-- Ikon status (opsional) -->
+                    <div class="absolute bottom-2 right-2 rounded-full border-2 border-white"></div>
+                </div>
+
+                <!-- Nama Lengkap - Diubah kembali menjadi text-3xl -->
+                <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-1 text-center md:text-left whitespace-nowrap">SANDRO NATANAEL</h2>
+                <!-- Warna teks Mahasiswa Teknik Informatika diubah ke secondary (biru tua) -->
+                <p class="text-xl text-secondary font-medium mb-4 text-center md:text-left">Mahasiswa Teknik Informatika</p>
+
+                <!-- Kontak Singkat (Opsional) -->
+                <div class="space-y-2 mt-4 w-full">
+                    <div class="flex items-center text-gray-600">
+                        <!-- Icon Pin Lokasi menggunakan SVG, warna diubah ke secondary -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-secondary"><path d="M20 10c0 6-8 10-8 10s-8-4-8-10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Indonesia</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Kolom Kanan: Detail Data -->
+            <div class="w-full md:w-2/3 space-y-4">
+                
+                <!-- Judul Bagian Detail, warna diubah ke secondary, border diubah ke primary (emas) -->
+                <h3 class="text-2xl font-semibold text-secondary border-b-2 border-primary pb-2 mb-4">Detail Informasi</h3>
+
+                <!-- Data Item: NIM - Background diubah ke Putih (bg-white) -->
+                <div class="data-item p-4 bg-white rounded-lg transition duration-200">
+                    <p class="text-sm font-medium text-gray-500">Nomor Induk Mahasiswa (NIM)</p>
+                    <p class="text-lg font-bold text-gray-800">2455201017</p>
+                </div>
+
+                <!-- Data Item: Kelas - Background diubah ke Putih (bg-white) -->
+                <div class="data-item p-4 bg-white rounded-lg transition duration-200">
+                    <p class="text-sm font-medium text-gray-500">Kelas</p>
+                    <p class="text-lg font-bold text-gray-800">TI 32 (Reguler Pagi)</p>
+                </div>
+
+                <!-- Data Item: Tempat, Tanggal Lahir - Background diubah ke Putih (bg-white) -->
+                <div class="data-item p-4 bg-white rounded-lg transition duration-200">
+                    <p class="text-sm font-medium text-gray-500">Tempat & Tanggal Lahir</p>
+                    <p class="text-lg font-bold text-gray-800">DURI, 29 MARET 2005</p>
+                </div>
+                
+                <!-- Data Item: Alamat Rumah - Background diubah ke Putih (bg-white) -->
+                <div class="data-item p-4 bg-white rounded-lg transition duration-200">
+                    <p class="text-sm font-medium text-gray-500">Alamat Rumah</p>
+                    <p class="text-lg font-bold text-gray-800">Jl. Kembang Sari, Umban Sari, Kec. Rumbai, Kota Pekanbaru, Riau 28266</p>
+                </div>
+
+                <!-- Data Item: Mata Kuliah Favorit (Contoh Mata Kuliah) - Background diubah ke Putih (bg-white) -->
+                <div class="data-item p-4 bg-white rounded-lg transition duration-200">
+                    <p class="text-sm font-medium text-gray-500">Mata Kuliah Semester Ini</p>
+                    <div class="flex flex-wrap gap-2 mt-1">
+                        <!-- Warna background chip MK diubah ke Hijau Cerah (bg-green-500) -->
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">JARINGAN KOMPUTER</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">KECERDASAN BUATAN</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">PEMROGRAMAN WEB 1</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">STRUKTUR DATA</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">BAHASA INDONESIA</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">ALJABAR LINEAR</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">REKAYASA PERANGKAT LUNAK</span>
+                        <span class="px-3 py-1 text-sm font-semibold bg-green-500 text-black rounded full">PEMROGRAMAN ORIENTASI OBJEK 1</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Footer Kartu -->
+        <div class="bg-gray-100 p-4 text-center text-sm text-gray-500">
+            Dibuat dengan ❤️ dan semangat belajar Pemrograman Web.
+        </div>
+
+    </div>
+    
+</body>
+</html>
